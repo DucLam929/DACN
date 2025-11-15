@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Giao diện web - Chủ đề Xanh</title>
+  <meta name="description" content="Mẫu giao diện web màu xanh, responsive, dễ chỉnh sửa">
+
+<style>
+:root {
+    --bg:#e8f6ff; 
+    --card:#ffffff;
+    --muted:#51a6b6;
+    --accent:#0ea5e9;
+    --accent-2:#2563eb;
+    --glass: rgba(14,165,233,0.06);
+    --radius:12px;
+    --max-width:1100px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, 'Segoe UI', Roboto, Arial;
+}
+
+body {
+    background: linear-gradient(180deg, var(--bg), #dff3ff);
+    color: #083344;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0 40px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    border-radius: 12px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #083344;
+    font-weight: 500;
+}
+
+nav a.primary {
+    background: var(--accent);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 10px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.hero .eyebrow {
+    font-size: 14px;
+    color: var(--accent-2);
+    font-weight: 600;
+}
+
+.hero .headline {
+    font-size: 32px;
+    margin: 10px 0;
+}
+
+.hero .sub {
+    max-width: 480px;
+    color: #084a63;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+.btn-primary {
+    background: var(--accent);
+    color: white;
+}
+.btn-ghost {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+}
+
+.schedule-box {
+    margin-top: 40px;
+    background: var(--card);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.view-switch {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.switch-btn {
+    padding: 8px 12px;
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    background: white;
+    color: var(--accent);
+    cursor: pointer;
+    font-weight: 500;
+}
+.switch-btn.active {
+    background: var(--accent);
+    color: white;
+}
+
+.hidden { display: none; }
+
+.week-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 12px;
+}
+
+.week-col {
+    background: var(--glass);
+    border: 1px solid rgba(14,165,233,0.2);
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.week-col h4 {
+    margin-top: 0;
+    color: var(--accent-2);
+}
+
+.timeline-list { padding: 0; margin: 0; }
+.timeline-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #dbe9f3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e3edf5;
+}
+
+table th {
+    background: var(--glass);
+    color: var(--accent-2);
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="brand">
+    <div class="logo">TL</div>
+    <div>
+      <h1>TimeLence</h1>
+      <p class="muted">Website sắp xếp thời gian biểu thông minh</p>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#schedule">Thời gian biểu</a>
+    <a href="#pricing">Báo giá</a>
+    <a class="primary" href="#">Đăng ký</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+   
+    <h2 class="headline">Tiêu đề/ cái gì đó giống như Quote chẳng hạn ????</h2>
+
+    <p class="sub">Mô tả xem cái web này vô dụng cỡ nào </p>
+
+    <div class="hero-cta">
+      <button class="btn btn-primary">Bắt đầu</button>
+      <button class="btn btn-ghost">Xem tính năng</button>
+    </div>
+  </div>
+
+  <!-- ==== ĐÃ SỬA: KHUNG PREVIEW THÀNH IMG ==== -->
+  <div style="display:flex;align-items:center;justify-content:center">
+    <img 
+      src="IMG_3537.gif" 
+      alt="Preview"
+      style="width:260px;height:auto;border-radius:10px;object-fit:cover;box-shadow:0 2px 8px rgba(0,0,0,0.1);"
+    >
+  </div>
+</section>
+
+<section id="schedule" class="schedule-box">
+  <h2 style="margin:0 0 16px 0;color:#083344;">Thời gian biểu</h2>
+
+  <div class="view-switch">
+    <button class="switch-btn active" data-view="week">Tuần</button>
+    <button class="switch-btn" data-view="timeline">Dòng thời gian</button>
+    <button class="switch-btn" data-view="table">Bảng</button>
+  </div>
+
+  <div id="view-week">
+    <div class="week-grid">
+      <div class="week-col"><h4>Thứ 2</h4></div>
+      <div class="week-col"><h4>Thứ 3</h4></div>
+      <div class="week-col"><h4>Thứ 4</h4></div>
+      <div class="week-col"><h4>Thứ 5</h4></div>
+      <div class="week-col"><h4>Thứ 6</h4></div>
+      <div class="week-col"><h4>Thứ 7</h4></div>
+      <div class="week-col"><h4>Chủ nhật</h4></div>
+    </div>
+  </div>
+
+  <div id="view-timeline" class="hidden">
+    <ul class="timeline-list">
+      <li class="timeline-item">08:00 — Mẫu timeline</li>
+      <li class="timeline-item">10:00 — Công việc khác</li>
+    </ul>
+  </div>
+
+  <div id="view-table" class="hidden">
+    <table>
+      <tr>
+        <th>Công việc</th>
+        <th>Bắt đầu</th>
+        <th>Kết thúc</th>
+        <th>Ghi chú</th>
+      </tr>
+      <tr>
+        <td>Mẫu task</td>
+        <td>08:00</td>
+        <td>09:00</td>
+        <td>Ghi chú</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+
+
+</div>
+
+<script>
+const btns = document.querySelectorAll(".switch-btn");
+const views = {
+  week: document.getElementById("view-week"),
+  timeline: document.getElementById("view-timeline"),
+  table: document.getElementById("view-table"),
+};
+btns.forEach(btn=>{
+  btn.onclick=()=>{
+    btns.forEach(b=>b.classList.remove("active"));
+    btn.classList.add("active");
+    const v=btn.dataset.view;
+    Object.keys(views).forEach(k=>{
+      views[k].classList.toggle("hidden", k!==v);
+    });
+  }
+});
+</script>
+
+</body>
+</html>
